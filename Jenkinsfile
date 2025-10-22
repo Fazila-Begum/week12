@@ -17,20 +17,20 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Build Docker Image"
-                bat "docker build -t teju898/week12:t5 ."
+                bat "docker build -t fazilabegum/week12:t5 ."
             }
         }
 
         stage('Docker Login') {
             steps {
-                bat 'docker login -u teju898 -p teju@8985'
+                bat 'docker login -u fazilabegum -p admin@123'
             }
         }
 
         stage('Push Docker Image to Docker Hub') {
             steps {
                 echo "Push Docker Image to Docker Hub"
-                bat "docker push teju898/week12:t5"
+                bat "docker push fazilabegum/week12:t5"
             }
         }
 
